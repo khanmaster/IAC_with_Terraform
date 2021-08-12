@@ -22,7 +22,5 @@ When you have unzipped the binary file, there's no installer. They students shou
 - Install Terraform `choco install terraform`
 - Check installation `terraform --version`
 - Should see below outcome if everything went well
-- ```Terraform v1.0.4
-on windows_amd64
-+ provider registry.terraform.io/hashicorp/aws v3.53.0
-```
+
+- `Terraform v1.0.4`
