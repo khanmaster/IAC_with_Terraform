@@ -4,7 +4,8 @@
 You can download the binary from the following link:
 
 https://www.terraform.io/downloads.html
-When you have unzipped the binary file, there's no installer. They students should move the file to their /usr/local/bin directory and set the Path if necessary.
+When you have unzipped the binary file, there's no installer. 
+- should move the file to `/usr/local/bin` directory and set the Path as env var if necessary.
 
 
 - **For Windows**
