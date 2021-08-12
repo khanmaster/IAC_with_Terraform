@@ -10,7 +10,7 @@ When you have unzipped the binary file, there's no installer. They students shou
 - **For Windows**
 - Install Chocolaty
 
-- `https://chocolatey.org/install`
+https://chocolatey.org/install
 -  we can also install it using chocolatey package managers
 - ```Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))```
 
