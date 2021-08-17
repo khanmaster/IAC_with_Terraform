@@ -42,9 +42,9 @@ resource "aws_instance" "app_instance" {
   # aws_key_path = var.aws_key_path
 }
 ```
-vpc- IGW - RT - Subnets - NACLs - SG
+- vpc- IGW - RT - Subnets - NACLs - SG
 # Let's create our VPC
-
+```
 resource "aws_vpc" "terraform_vpc_code_test" {
   cidr_block       = var.cidr_block 
   #"10.0.0.0/16"
@@ -54,7 +54,7 @@ resource "aws_vpc" "terraform_vpc_code_test" {
     Name = var.vpc_name
   }
 } 
-
+```
 ### Let's get into building complete VPC networking
 
 - Starting with our subnet for nodeapp
