@@ -119,7 +119,7 @@ ingress {
 ```
 
 - Let's create a route table 
-  ```
+```
 resource "aws_route_table" "public" {
   vpc_id = "${var.vpc_id}"
 
@@ -135,7 +135,7 @@ resource "aws_route_table" "public" {
 }
 ```
 # Route table associations
-
+```
 resource "aws_route_table_association" "assoc" {
   subnet_id      =  "${aws_subnet.eng89_shahrukh_app_subnet.id}"
   route_table_id = "${aws_route_table.public.id}"
@@ -153,7 +153,7 @@ resource "aws_internet_gateway" "app" {
 }
 ```
 - We are all set and ready to launch our app into our new VPC
-### Launch an instance
+### Launch the app instance
 ```
 
 reource "aws_instance" "app_instance" {
