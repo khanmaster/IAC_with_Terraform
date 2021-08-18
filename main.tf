@@ -100,13 +100,31 @@ resource "aws_instance" "app_instance" {
       Name = "eng89_shahrukh_pub_app"
   }
   key_name = var.aws_key_name
-  # runs commands in instance
+#   runs commands in instance
+
+provisioner "file" {
+  source      = "script.sh"
+  destination = "/tmp/script.sh"  
+  
+  connection {
+      type        = "ssh"
+      user        = "ubuntu"
+      private_key = file(var.aws_key_path)
+      host        = self.public_ip
+    }
+  }
+
+
 provisioner "remote-exec" {
   	inline = [
-            "sudo apt-get update -y", 
-  					"cd app",
-  					"sudo npm install",
-  					"sudo node app.js"
+            "chmod +x /tmp/script.sh",
+            "sudo /tmp/script.sh",
+            # "cd /home/ubuntu/app",
+            # "sudo apt-get update -y",
+            # "sudo apt-get upgrade -y",
+            # "sudo npm install",
+            # "sudo seeds/seed.js",
+            # "sudo npm start",
   					]
   	connection {
       type        = "ssh"
@@ -115,6 +133,6 @@ provisioner "remote-exec" {
       host        = self.public_ip
     }
   }
-
 }
+
 

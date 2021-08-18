@@ -183,3 +183,8 @@ provisioner "remote-exec" {
 
 }
 ```
+- https://www.terraform.io/docs/language/resources/provisioners/remote-exec.html
+  
+
+- Time to discover data queries in Terraform
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway
